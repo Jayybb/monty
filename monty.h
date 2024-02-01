@@ -1,5 +1,5 @@
-#ifndef "MONTY_H"
-#define "MONTY_H"
+#ifndef MONTY_H
+#define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -75,5 +75,8 @@ void f_pop(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
 void stack(stack_t *head);
 void f_sub(stack_t **head, unsigned int counter);
-
+void free_stack(stack_t *head);
+void f_queue(stack_t **head, unsigned int counter);
+void addqueue(stack_t **head, int n);
+ssize_t custom_getline(char **lineptr, size_t *n, FILE *stream);
 #endif /*MONTY_H*/

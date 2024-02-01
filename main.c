@@ -1,4 +1,7 @@
 #include "monty.h"
+#include <stdio.h>
+
+bus_t bus = {NULL, NULL, NULL, 0};
 /**
 * main -  code interpreter
 * @argc:  arguments
@@ -13,7 +16,6 @@ int main(int argc, char *argv[])
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
 	unsigned int counter = 0;
-bus_t bus = {NULL, NULL, NULL, 0};
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -29,12 +31,12 @@ bus_t bus = {NULL, NULL, NULL, 0};
 	while (read_line > 0)
 	{
 		content = NULL;
-		read_line = getline(&content, &size, file);
+		read_line = custom_getline(&content, &size, file);
 		bus.content = content;
 		counter++;
 		if (read_line > 0)
 		{
-			execute(content, &stack, counter, file);
+			execut_ion(content, &stack, counter, file);
 		}
 		free(content);
 	}
