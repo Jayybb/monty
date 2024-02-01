@@ -53,9 +53,9 @@ typedef struct instruction_s
 } instruction_t;
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
-void f_addition(stack_t **head, unsigned int counter);
+void f_add(stack_t **head, unsigned int counter);
 void f_pchar(stack_t **head, unsigned int counter);
-void f_divide(stack_t **head, unsigned int counter);
+void f_div(stack_t **head, unsigned int counter);
 void f_push(stack_t **head, unsigned int counter);
 int execut_ion(char *content, stack_t **stack,
               unsigned int counter, FILE *file);
